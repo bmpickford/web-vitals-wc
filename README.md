@@ -32,7 +32,7 @@ yarn add web-vitals-wc
 ```
 
 ## Examples
-See the [examples](https://github.com/bmpickford/web-vitals-wc) folder
+See [examples](./examples/README.md)
 
 ## Browser Support
 
