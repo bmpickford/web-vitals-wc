@@ -17,7 +17,8 @@ npm-debug.log
 
 # build
 /_site/
-/dist/
 /out-tsc/
+dist/
+build/
 
 storybook-static
