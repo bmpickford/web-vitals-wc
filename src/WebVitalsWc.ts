@@ -37,6 +37,10 @@ export class WebVitalsWC extends LitElement {
       display: block;
     }
 
+    .container {
+      position: absolute;
+    }
+
     .box {
       box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
         0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06);
@@ -60,8 +64,8 @@ export class WebVitalsWC extends LitElement {
       opacity: 0;
       width: max-content;
       padding: 4pt 8pt;
-      position: relative;
-      top: -164px;
+      position: absolute;
+      top: -140px;
     }
 
     .performance:hover {

@@ -1,4 +1,4 @@
-import { html, TemplateResult } from 'lit';
+import { html, TemplateResult } from 'lit-element';
 import '../index.js';
 
 export default {
@@ -12,13 +12,11 @@ interface Story<T> {
   argTypes?: Record<string, unknown>;
 }
 
-interface ArgTypes {
-  title?: string;
-  counter?: number;
-  textColor?: string;
-  slot?: TemplateResult;
-}
+interface ArgTypes {}
 
-const Template: Story<ArgTypes> = () => html`<web-vitals-wc></web-vitals-wc>`;
+const MarginWrapper = (child: TemplateResult) =>
+  html`<div style="margin-top: 200px">${child}</div>`;
+const Template: Story<ArgTypes> = () =>
+  MarginWrapper(html`<web-vitals-wc></web-vitals-wc>`);
 
 export const Default = Template.bind({});

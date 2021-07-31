@@ -1,30 +1,76 @@
 {
-  "version": 2,
-  "tags": [
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
     {
-      "name": "web-vitals-wc",
-      "description": "A component with a title and an action counter",
-      "properties": [
+      "kind": "javascript-module",
+      "path": "src/WebVitalsWc.ts",
+      "declarations": [
         {
-          "name": "title",
-          "type": "String",
-          "description": "The title of your component",
-          "default": "Hey there"
-        },
-        {
-          "name": "counter",
-          "type": "Number",
-          "description": "An action counter",
-          "default": 0
+          "kind": "class",
+          "description": "",
+          "name": "WebVitalsWC",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_cls",
+              "type": {
+                "text": "number | undefined"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_fid",
+              "type": {
+                "text": "number | undefined"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_lcp",
+              "type": {
+                "text": "number | undefined"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_fcp",
+              "type": {
+                "text": "number | undefined"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_ttfb",
+              "type": {
+                "text": "number | undefined"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "web-vitals-wc",
+          "customElement": true
         }
       ],
-      "events": [],
-      "slots": [],
-      "cssProperties": [
+      "exports": [
         {
-          "name": "--web-vitals-wc-text-color",
-          "description": "Main Text Color",
-          "type": "Color"
+          "kind": "js",
+          "name": "WebVitalsWC",
+          "declaration": {
+            "name": "WebVitalsWC",
+            "module": "src/WebVitalsWc.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "web-vitals-wc",
+          "declaration": {
+            "name": "WebVitalsWC",
+            "module": "src/WebVitalsWc.ts"
+          }
         }
       ]
     }
