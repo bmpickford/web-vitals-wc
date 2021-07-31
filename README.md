@@ -15,6 +15,8 @@
 ![web-vitals-chrome](https://user-images.githubusercontent.com/12684286/127747008-898fca0b-a98f-475c-a8f5-a7c456b4ef16.png)
 
 
+### [Demo](https://bmpickford.github.io/web-vitals-wc/)
+
 ## Installation
 ```bash
 yarn add web-vitals-wc
