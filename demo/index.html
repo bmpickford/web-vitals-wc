@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <!-- Load lots of random bundles to reduce TTFB and FCP -->
+  <!-- Bootstrap -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.css" rel="stylesheet" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.js" crossorigin="anonymous"></script> -->
+  <!-- Foundation -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.css" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation-float.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation-prototype.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation-rtl.css" crossorigin="anonymous"> -->
+
+  <!-- Materialize -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script> -->
+  <!-- Load lots of fonts -->
+  <style>
+    /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900');
+    @import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic');
+    @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100');
+    @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@200');
+    @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@300');
+    @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@400'); */
+    body {
+      background: #fafafa;
+      margin: 500px 128px;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit';
+    import '../dist/index.js';
+
+    render(
+      html`
+        <web-vitals-wc></web-vitals-wc>
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>
