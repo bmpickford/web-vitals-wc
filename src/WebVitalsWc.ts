@@ -9,6 +9,12 @@ const perfSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
     <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
 </svg>`;
 
+const infoSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
+  <circle cx="12" cy="12" r="10"></circle>
+  <line x1="12" y1="16" x2="12" y2="12"></line>
+  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+</svg>`;
+
 // https://github.com/GoogleChrome/web-vitals#browser-support
 // CLS and LCP are only available on Chromium browsers. Not aiming to support IE
 const isChromiumBrowser = () => {
@@ -24,6 +30,11 @@ const isChromiumBrowser = () => {
     return true;
   }
   return false;
+};
+
+const infoClickHandler = () => {
+  const url = `https://developers.google.com/speed/pagespeed/insights/?url=${window.location.href}`;
+  window.open(url, '_blank')?.focus();
 };
 
 /**
@@ -58,8 +69,6 @@ export class WebVitalsWC extends LitElement {
     }
 
     .performance {
-      /* display: flex;
-      opacity: 1; */
       display: none;
       opacity: 0;
       width: max-content;
@@ -72,6 +81,12 @@ export class WebVitalsWC extends LitElement {
       opacity: 1;
       display: flex;
       animation: fade 0.4s;
+    }
+
+    .info {
+      cursor: pointer;
+      margin-bottom: 0;
+      margin-top: auto;
     }
 
     @keyframes fade {
@@ -148,6 +163,13 @@ export class WebVitalsWC extends LitElement {
                 ></performance-guage>
               `
             : undefined}
+          <div
+            class="info"
+            @click=${infoClickHandler}
+            @keyup=${infoClickHandler}
+          >
+            ${unsafeSVG(infoSVG)}
+          </div>
         </div>
       </div>
     `;

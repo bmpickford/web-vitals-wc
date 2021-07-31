@@ -69,7 +69,8 @@
           "ignorePackages": true
         }
       ]
-    }
+    },
+    "ignorePatterns": "examples/**/*.js"
   },
   "prettier": {
     "singleQuote": true,

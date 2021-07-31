@@ -16,5 +16,6 @@
     "rootDir": "./",
     "declaration": true,
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts"],
+  "exclude": ["examples/", "dist/"]
 }

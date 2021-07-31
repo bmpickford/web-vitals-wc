@@ -15,6 +15,7 @@
     "inlineSources": false,
     "rootDir": "./",
     "declaration": true,
+    "removeComments": true
   },
   "include": ["src/**/*.ts", "index.ts"]
 }
