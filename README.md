@@ -4,6 +4,9 @@
   <a href="https://github.com/bmpickford/cem-plugin-docsify/blob/main/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/github/license/bmpickford/cem-plugin-docsify" />
   </a>
+  <a href="https://bundlephobia.com/package/web-vitals-wc" targe="_blank">
+    <img alt="Size" src="https://img.shields.io/bundlephobia/minzip/web-vitals-wc?label=size" />
+  </a>
 </p>
 
 > Web component to show web vitals on your page
@@ -11,9 +14,6 @@
 
 ![web-vitals-chrome](https://user-images.githubusercontent.com/12684286/127747008-898fca0b-a98f-475c-a8f5-a7c456b4ef16.png)
 
-
-
-TODO: Demo / Docs
 
 ## Installation
 ```bash
@@ -28,6 +28,9 @@ yarn add web-vitals-wc
 
 <web-vitals-wc></web-vitals-wc>
 ```
+
+## Examples
+See the [examples](https://github.com/bmpickford/web-vitals-wc) folder
 
 ## Browser Support
 
