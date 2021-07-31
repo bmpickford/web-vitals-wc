@@ -1,13 +1,24 @@
-# \<web-vitals-wc>
+<h1 align="center">web-vitals-wc</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/bmpickford/cem-plugin-docsify/blob/main/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/github/license/bmpickford/cem-plugin-docsify" />
+  </a>
+</p>
 
 > Web component to show web vitals on your page
 
-TODO: gif
 
-Demo (TODO)
+![web-vitals-chrome](https://user-images.githubusercontent.com/12684286/127747008-898fca0b-a98f-475c-a8f5-a7c456b4ef16.png)
+
+
+
+TODO: Demo / Docs
 
 ## Installation
-TODO
+```bash
+yarn add web-vitals-wc
+```
 
 ## Usage
 ```html
@@ -17,6 +28,11 @@ TODO
 
 <web-vitals-wc></web-vitals-wc>
 ```
+
+## Browser Support
+
+See [Web Vitals](https://github.com/GoogleChrome/web-vitals#browser-support)
+
 ## Development
 
 ### Local
@@ -37,4 +53,15 @@ To run a local instance of Storybook for your component, run
 yarn storybook
 ```
 
+## 🤝 Contributing
 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/bmpickford/cem-plugin-docsify/issues)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+Copyright © 2021 [Benjamin Pickford](https://github.com/bmpickford).<br />
+This project is [MIT](https://github.com/bmpickford/cem-plugin-docsify/blob/master/LICENSE) licensed.
