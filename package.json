@@ -11,6 +11,7 @@
     "start": "yarn build && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
     "build": "rimraf dist && tsc",
     "prepublish": "rimraf dist && tsc -p tsconfig.publish.json",
+    "postbuild": "sh ./scripts/prepare.sh",
     "lint": "eslint --ext .ts,.html . --ignore-path .gitignore && prettier \"**/*.ts\" --check --ignore-path .gitignore",
     "format": "eslint --ext .ts,.html . --fix --ignore-path .gitignore && prettier \"**/*.ts\" --write --ignore-path .gitignore",
     "test": "tsc && wtr --coverage",
@@ -84,5 +85,21 @@
       "eslint --fix",
       "prettier --write"
     ]
+  },
+  "keywords": [
+    "custom-elements",
+    "customelements",
+    "webcomponents",
+    "web-vitals",
+    "performance",
+    "mertrics"
+  ],
+  "homepage": "https://github.com/bmpickford/web-vitals-wc#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmpickford/web-vitals-wc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bmpickford/web-vitals-wc/issues"
   }
 }
