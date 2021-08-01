@@ -10960,10 +10960,10 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-web-vitals-wc@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/web-vitals-wc/-/web-vitals-wc-0.0.2.tgz#c344a6cc93694f89b191d1826cb42bc9f4e8db33"
-  integrity sha512-p6dnvJQt4q13Ukd3NpIEMVSmCKYdCsDngWtQFKm4ms2ZVk8osRaWgoVyS7w6iodhWlpMx9y9TxfBX+T5KswD3A==
+web-vitals-wc@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/web-vitals-wc/-/web-vitals-wc-0.0.3.tgz#c4e4bd9e41e219cbb2bb6bb5ee330287fd23c2e2"
+  integrity sha512-khtgEtvwYIurAdGv2/6WyZoPQf40i4QTQLSpLJel9Gk5Ae1G0Du3yGwJ2iLbK3FASEIikBMIQD74bB3Nz5HFIA==
   dependencies:
     lit "^2.0.0-rc.2"
     tslib "^2.3.0"

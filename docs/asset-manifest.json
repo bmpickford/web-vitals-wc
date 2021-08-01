@@ -5,16 +5,16 @@
     "main.js.map": "/web-vitals-wc/static/js/main.84782be6.chunk.js.map",
     "runtime-main.js": "/web-vitals-wc/static/js/runtime-main.b8f18a4f.js",
     "runtime-main.js.map": "/web-vitals-wc/static/js/runtime-main.b8f18a4f.js.map",
-    "static/js/2.89ce357d.chunk.js": "/web-vitals-wc/static/js/2.89ce357d.chunk.js",
-    "static/js/2.89ce357d.chunk.js.map": "/web-vitals-wc/static/js/2.89ce357d.chunk.js.map",
+    "static/js/2.76e36ffa.chunk.js": "/web-vitals-wc/static/js/2.76e36ffa.chunk.js",
+    "static/js/2.76e36ffa.chunk.js.map": "/web-vitals-wc/static/js/2.76e36ffa.chunk.js.map",
     "index.html": "/web-vitals-wc/index.html",
     "static/css/main.dd6c6eb2.chunk.css.map": "/web-vitals-wc/static/css/main.dd6c6eb2.chunk.css.map",
-    "static/js/2.89ce357d.chunk.js.LICENSE.txt": "/web-vitals-wc/static/js/2.89ce357d.chunk.js.LICENSE.txt",
+    "static/js/2.76e36ffa.chunk.js.LICENSE.txt": "/web-vitals-wc/static/js/2.76e36ffa.chunk.js.LICENSE.txt",
     "static/media/logo.1d81d62b.svg": "/web-vitals-wc/static/media/logo.1d81d62b.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.b8f18a4f.js",
-    "static/js/2.89ce357d.chunk.js",
+    "static/js/2.76e36ffa.chunk.js",
     "static/css/main.dd6c6eb2.chunk.css",
     "static/js/main.84782be6.chunk.js"
   ]
