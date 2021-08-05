@@ -1,12 +1,15 @@
 <h1 align="center">web-vitals-wc</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
+  <a href="https://www.webcomponents.org/element/web-vitals-wc" targe="_blank">
+    <img alt="Size" src="https://img.shields.io/badge/webcomponents.org-published-blue.svg" />
+  </a>
   <a href="https://github.com/bmpickford/cem-plugin-docsify/blob/main/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/github/license/bmpickford/cem-plugin-docsify" />
   </a>
   <a href="https://bundlephobia.com/package/web-vitals-wc" targe="_blank">
-    <img alt="Size" src="https://img.shields.io/bundlephobia/minzip/web-vitals-wc?label=size" />
+    <img alt="Size" src="https://img.shields.io/bundlephobia/minzip/web-vitals-wc" />
   </a>
+  
 </p>
 
 > Web component to show web vitals on your page
