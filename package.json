@@ -1,12 +1,13 @@
 {
   "name": "web-vitals-wc",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "Webcomponent to show web vitals for your site",
   "author": "Benjamin Pickford",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "customElements": "custom-elements.json",
+  "type": "module",
   "scripts": {
     "start": "yarn build && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
     "build": "rimraf dist && tsc",
