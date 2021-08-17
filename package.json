@@ -1,6 +1,6 @@
 {
   "name": "web-vitals-wc",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Webcomponent to show web vitals for your site",
   "author": "Benjamin Pickford",
   "license": "MIT",
@@ -11,7 +11,7 @@
   "scripts": {
     "start": "yarn build && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
     "build": "rimraf dist && tsc",
-    "prepublish": "rimraf dist && tsc -p tsconfig.publish.json",
+    "prepublish": "rimraf dist && tsc -p tsconfig.publish.json && rollup -c",
     "postbuild": "sh ./scripts/prepare.sh",
     "lint": "eslint --ext .ts,.html . --ignore-path .gitignore && prettier \"**/*.ts\" --check --ignore-path .gitignore",
     "format": "eslint --ext .ts,.html . --fix --ignore-path .gitignore && prettier \"**/*.ts\" --write --ignore-path .gitignore",
@@ -46,6 +46,7 @@
     "lit-html": "^1.4.1",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
+    "rollup": "^2.56.2",
     "typescript": "^4.3.5"
   },
   "eslintConfig": {
@@ -71,7 +72,10 @@
         }
       ]
     },
-    "ignorePatterns": "examples/**/*.js"
+    "ignorePatterns": [
+      "examples/**/*.js",
+      "dist/"
+    ]
   },
   "prettier": {
     "singleQuote": true,
