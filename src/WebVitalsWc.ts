@@ -1,15 +1,14 @@
-import { html, css, LitElement } from 'lit';
+import { html, css, LitElement, svg } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
-import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 import { getLCP, getFID, getCLS, getFCP, getTTFB } from 'web-vitals';
 
 import './PerformanceGuage.js';
 
-const perfSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity">
+const perfSVG = svg`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity">
     <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
 </svg>`;
 
-const infoSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
+const infoSVG = svg`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
   <circle cx="12" cy="12" r="10"></circle>
   <line x1="12" y1="16" x2="12" y2="12"></line>
   <line x1="12" y1="8" x2="12.01" y2="8"></line>
@@ -18,6 +17,7 @@ const infoSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
 // https://github.com/GoogleChrome/web-vitals#browser-support
 // CLS and LCP are only available on Chromium browsers. Not aiming to support IE
 const isChromiumBrowser = () => {
+  if (typeof navigator === 'undefined') return true;
   const { userAgent } = navigator;
 
   if (
@@ -46,6 +46,8 @@ export class WebVitalsWC extends LitElement {
   static styles = css`
     :host {
       display: block;
+      --bg-color: transparent;
+      --text-color: unset;
     }
 
     .container {
@@ -56,6 +58,8 @@ export class WebVitalsWC extends LitElement {
       box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
         0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06);
       border-radius: 4pt;
+      background-color: var(--bg-color);
+      color: var(--text-color);
     }
 
     .hoverable {
@@ -137,7 +141,7 @@ export class WebVitalsWC extends LitElement {
   render() {
     return html`
       <div class="container">
-        <span class="hoverable">${unsafeSVG(perfSVG)}</span>
+        <span class="hoverable">${perfSVG}</span>
         <div class="performance box">
           <performance-guage
             .label=${'fcp'}
@@ -168,7 +172,7 @@ export class WebVitalsWC extends LitElement {
             @click=${infoClickHandler}
             @keyup=${infoClickHandler}
           >
-            ${unsafeSVG(infoSVG)}
+            ${infoSVG}
           </div>
         </div>
       </div>

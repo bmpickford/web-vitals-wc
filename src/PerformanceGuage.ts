@@ -1,6 +1,5 @@
-import { html, css, LitElement } from 'lit';
+import { html, css, LitElement, svg } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 
 /**
  * Type of metric for the guage to use
@@ -95,8 +94,6 @@ export class PerformanceGuage extends LitElement {
       stroke: #5c5c5c;
     }
     .guage-title {
-      color: #737373;
-      fill: #737373;
       stroke: none;
       font-size: 26px;
       line-height: 26px;
@@ -142,25 +139,20 @@ export class PerformanceGuage extends LitElement {
   render() {
     if (!this.label)
       throw new Error('"label" attribute is required for "performance-guage"');
-    if (!this.value)
-      return html`${unsafeSVG(this._renderUndefinedGuageSVG(this.label))}`;
+    if (!this.value) return html`${this._renderUndefinedGuageSVG(this.label)}`;
 
     const breakpoint = breakpoints[this.label];
     if (this.value < breakpoint[0])
-      return html`${unsafeSVG(
-        this._renderPassGuageSVG(this.label, this.value)
-      )}`;
+      return html`${this._renderPassGuageSVG(this.label, this.value)}`;
     if (this.value < breakpoint[1])
-      return html`${unsafeSVG(
-        this._renderAverageGuageSVG(this.label, this.value)
-      )}`;
-    return html`${unsafeSVG(this._renderFailGuageSVG(this.label, this.value))}`;
+      return html`${this._renderAverageGuageSVG(this.label, this.value)}`;
+    return html`${this._renderFailGuageSVG(this.label, this.value)}`;
   }
 
   _renderPassGuageSVG = (
     label: PerformanceType,
     value: number
-  ) => `<svg class="guage-div guage-perf guage-green" viewBox="0 0 200 200" width="200" height="200" x="100" y="0">
+  ) => svg`<svg class="guage-div guage-perf guage-green" viewBox="0 0 200 200" width="200" height="200" x="100" y="0">
     <circle class="gauge-base" r="56" cx="100" cy="60" stroke-width="8"></circle>
     <circle class="gauge-arc guage-arc-1" r="56" cx="100" cy="60" stroke-width="8" style="stroke-dasharray: 334.2651, 351.858;"></circle>
     <text class="guage-text" x="100px" y="60px" alignment-baseline="central" dominant-baseline="central" text-anchor="middle">${value}ms</text>
@@ -172,7 +164,7 @@ export class PerformanceGuage extends LitElement {
   _renderAverageGuageSVG = (
     label: PerformanceType,
     value: number
-  ) => `<svg class="guage-div guage-acc guage-orange" viewBox="0 0 200 200" width="200" height="200" x="300" y="0">
+  ) => svg`<svg class="guage-div guage-acc guage-orange" viewBox="0 0 200 200" width="200" height="200" x="300" y="0">
     <circle class="gauge-base" r="56" cx="100" cy="60" stroke-width="8"></circle>
     <circle class="gauge-arc guage-arc-2" r="56" cx="100" cy="60" stroke-width="8" style="stroke-dasharray: 263.89349999999996, 351.858;"></circle>
     <text class="guage-text" x="100px" y="60px" alignment-baseline="central" dominant-baseline="central" text-anchor="middle">${value}ms</text>
@@ -184,7 +176,7 @@ export class PerformanceGuage extends LitElement {
   _renderFailGuageSVG = (
     label: PerformanceType,
     value: number
-  ) => `<svg class="guage-div guage-best guage-red" viewBox="0 0 200 200" width="200" height="200" x="500" y="0">
+  ) => svg`<svg class="guage-div guage-best guage-red" viewBox="0 0 200 200" width="200" height="200" x="500" y="0">
     <circle class="gauge-base" r="56" cx="100" cy="60" stroke-width="8"></circle>
     <circle class="gauge-arc guage-arc-3" r="56" cx="100" cy="60" stroke-width="8" style="stroke-dasharray: 168.89184, 351.858;"></circle>
     <text class="guage-text" x="100px" y="60px" alignment-baseline="central" dominant-baseline="central" text-anchor="middle">${value}ms</text>
@@ -195,7 +187,7 @@ export class PerformanceGuage extends LitElement {
 
   _renderUndefinedGuageSVG = (
     label: PerformanceType
-  ) => `<svg class="guage-div guage-seo guage-undefined" viewBox="0 0 200 200" width="200" height="200" x="700" y="0">
+  ) => svg`<svg class="guage-div guage-seo guage-undefined" viewBox="0 0 200 200" width="200" height="200" x="700" y="0">
     <circle class="gauge-base" r="56" cx="100" cy="60" stroke-width="8"></circle>
     <circle class="gauge-arc guage-arc-4" r="56" cx="100" cy="60" stroke-width="8" style="stroke-dasharray: 351.858, 351.858;"></circle>
     <text class="guage-text" x="100px" y="60px" alignment-baseline="central" dominant-baseline="central" text-anchor="middle">NA</text>
